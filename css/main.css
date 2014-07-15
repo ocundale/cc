@@ -24,36 +24,8 @@ body {
     font-size: 1em;
     line-height: 1.4;
     background:#FFF;
+}
 
-    
-    /*background:url('../img/greenbg_tile.gif');*/
-}
-.galimg {
-    display:none;
-}
-img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-  display: none;    
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-    z-index:-1;
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-#galleryls canvas {
-    position: absolute;
-}
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
-}
 h1,h2 {
     text-align: center;
     color: white;
@@ -131,183 +103,81 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-#containermain {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-430px;
-    margin-top:-265px;
-}
 
-#container {
-    
-
-}
-.galleryls {
-    margin-top: 20px;
+.swoopcontainer {
+    overflow:hidden;
+    height:100%;
+    width:100%;
+    display:block;
     position: absolute;
 }
-.slidedownpage h1 {
-    margin-top:300px;
-    width:200px;
-    margin-left:350px;
-}
-.nav {
-    height: 40px;
-display: block;
-width: 800px;
-left: 50%;
-padding: 0px 0px 38px 20px;
-position: absolute;
-margin-left: -420px;
-    /*color: white;
-    box-shadow: 0px 0px 7px #FFE;
-    border: 1px solid #fff;
-    background-color: rgba(000,000,000,0.3);*/
-}
-.nav h3 {
+.word-swoop {
+    position: absolute;
+    font-size: 12vmax;
     float:left;
+    width: 600px;
+    height: 80px;
+    color:#000;
+    left:120%;
+    margin-left:0px;
+    margin-top: 0;
+}
+.swooped {
+    font-size: 6vmax;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#word1.swooped {
+    left: 12%!important;
+    top:auto!important;
+    bottom:2%;
+}
+#word2.swooped {
+    left: 46%!important;
+    top:auto!important;
+    bottom:2%;
+}
+#word3.swooped {
+    left: 85%!important;
+    top:auto!important;
+    bottom:2%;
+}
+.logo {
+    text-align: center;
+    width:40%;
+    position:absolute;
     display: block;
-    width:350px;
-    font-family: 'Give You Glory', cursive;
-    font-size: 24px;
+    left:-41%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
-h3.right {
-    float:right;
-    width:100px;
-}
-.nav h3 a {
-    text-decoration: none;
-}
-.nav h3 a:hover {
-    text-shadow: 0px 0px 1px blueviolet;
-
-}
-.flip_gallery {
-    height: 533px;
-    border:3px solid black;
-    margin-top: -3px;
-width: 800px;
-}
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-.maillink {
-    color: white;
-    font-size: 34px;
-    font-family: 'Junge', serif;
-    margin-top: 60px;
-}
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-#bgfader {
-    background: white;
-    opacity: .85;
-    -moz-opacity: .85;
-    -filter: alpha(opacity=85);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
+.cctitle {
     width: 100%;
-    z-index: 5;
+    color: #000;
+    text-align: center;
+    font-size: 10vmax;
+    position:absolute;
+    display: block;
+    left:-100%;
+    top:10%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.details {
     display: none;
-}
-
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
+    font-size: 1vmax;
+    color: #000;
+    float: left;
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    width: 100%;
 }
 
 /* ==========================================================================
@@ -318,6 +188,18 @@ width: 800px;
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+
+@media screen and (max-width: 640px) {
+    .swooped {
+        font-size: 4vmax;
+    }
+    .cctitle {
+        line-height: 100px;
+        font-size: 7vmax;
+    }
+
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -395,60 +277,4 @@ width: 800px;
     h3 {
         page-break-after: avoid;
     }
-    #galleria{ width: 700px; height: 400px; background: #000 }
-}
-
-.swoopcontainer {
-    overflow:hidden;
-    height:100%;
-    width:100%;
-    display:block;
-    position: absolute;
-}
-
-.word-swoop {
-  position: absolute;
-  font-size: 12vmax;
-  float:left;
-  width: 600px;
-  height: 80px;
-  min-width:600px;
-  color:#000;
-  left:120%;
-  margin-left:0px;
-  margin-top: 0;
-  -webkit-animation: flyin 5s ease 0s 1;
-  -moz-animation: flyin 5s ease 0s 1;
-  -o-animation: flyin 5s ease 0s 1;
-  -ms-animation: flyin 5s ease 0s 1;
-  animation: flyin 5s ease 0s 1;
-}
-.swooped {
-    font-size: 6vmax;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-}
-#word1.swooped {
-    left: 12%!important;
-    top:80%!important;
-}
-#word2.swooped {
-    left: 46%!important;
-    top:80%!important;
-}
-#word3.swooped {
-    left: 85%!important;
-    top:80%!important;
-}
-.logo {
-    width:40%;
-    position:absolute;
-    display: block;
-    left:-41%;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
 }
