@@ -11,6 +11,7 @@
 
 <head>
 
+  <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Conscious Creative</title>
@@ -30,16 +31,26 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
+<script type="text/javascript">
+$(document).ready(function() {
+    var easterEgg = 'vibewar';
+    var eggLength = easterEgg.length;
+    var keyHistory = '';
+    var match;
+        $(document).keypress(function(e) {
+            keyHistory += String.fromCharCode(e.which)
+            match = keyHistory.match(easterEgg); 
+            if(match) {
+                $('.linkting').click();
+                keyHistory = match =  '';
+            } else if (keyHistory.length > 30) {
+                keyHistory = keyHistory.substr((keyHistory.length - eggLength - 1));
+            }
+        });
+});
+</script>
 </head>
 <body>
-  <div class="swoopcontainer">
-    <img class="logo" src="img/cc.png">
-    <h2 id="word1" class="word-swoop">LIVE,</h2>
-    <h2 id="word2" class="word-swoop">CREATE,</h2>
-    <h2 id="word3" class="word-swoop">SHARE.</h2>
-  </div>
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
+<p><a href="http://www.consciouscreative.co.uk/mastered_vibewar_beats.zip" class="linkting" style="display:none">yo here i am G</a>
   </body>
 </html>

@@ -18,9 +18,9 @@
       init = false,
       background = opts.background,
       cornersTop = opts.cornersTop,
-      gradientColors = opts.gradientColors || ['#000','#CCC','#333'],
-      curlSize = opts.curlSize || 0.1,
-      scale = opts.scale,
+      gradientColors = opts.gradientColors || ['#000','#222','#333'],
+      curlSize = opts.curlSize*0.5 || 0.1,
+      scale = opts.scale*0.5,
       patterns = [],
       canvas2 = canvas.clone(),
       ctx2 = $.browser.msie?null:canvas2[0].getContext("2d"),
@@ -59,7 +59,7 @@
         onCorner = false,
         curlDuration=400,curling = false,
         animationTimer,startDate,
-        flipDuration=700,flipping = false,baseFlipX,baseFlipY,
+        flipDuration=1000,flipping = false,baseFlipX,baseFlipY,
         lastmX,lastmY,
         inCanvas = false,
         mousedown = false,
@@ -260,7 +260,7 @@
           ctx.fillStyle.height2 = ctx.fillStyle.height*r;
           ctx.fillRect(0,0,width,height);
         } else {
-          ctx.drawImage(img,(width-img.width*r)/2,(height-img.height*r)/2,img.width*r,img.height*r);
+          ctx.drawImage(img,(width-img.width*r),(height-img.height*r),img.width*r,img.height*r);
         }
         
         if(mY && mX!=width) {
@@ -383,7 +383,7 @@
         $(this).wrap("<div class='flip_gallery'>");
         var images = $(this).find("img");
         //cannot hide because explorer does not give the image dimensions if hidden
-        var canvas = $(document.createElement("canvas")).attr({width:width,height:height}).css({margin:0,marginTop:-92,width:width+"px",height:height+"px"})
+        var canvas = $(document.createElement("canvas")).attr({width:width,height:height}).css({margin:0,marginTop:-0,width:width+"px",height:height+"px"})
         $(this).css({position:"absolute",left:"-9000px",top:"-9000px"}).after(canvas);
         new Flip($(this).next(),width || 300,height || 300,images,opts);
       });
