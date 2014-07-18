@@ -4,7 +4,7 @@ $(function() {
 			$('#word3').css('margin-left', '-300px').animate({left:'50%', top:"60%"}, 1000);
 			setTimeout(function() {
 				$('.word-swoop').addClass('swooped');
-				$('.logo').animate({ left:'0%' }, 2000, function() {
+				$('.logo').animate({ left:'5%' }, 2000, function() {
 					$('.cctitle').animate({ left:'0%' }, 1000);
 					$('.details').fadeIn();
 				});

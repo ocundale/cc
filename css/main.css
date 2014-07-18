@@ -124,54 +124,54 @@ textarea {
 }
 .swooped {
     font-size: 6vmax;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 #word1.swooped {
     left: 12%!important;
     top:auto!important;
-    bottom:2%;
+    bottom:5%;
 }
 #word2.swooped {
     left: 46%!important;
     top:auto!important;
-    bottom:2%;
+    bottom:5%;
 }
 #word3.swooped {
     left: 85%!important;
     top:auto!important;
-    bottom:2%;
+    bottom:5%;
 }
 .logo {
     text-align: center;
     width:40%;
     position:absolute;
     display: block;
-    left:-41%;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    left:-45%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .cctitle {
     width: 100%;
     color: #000;
     text-align: center;
-    font-size: 10vmax;
+    font-size: 9vmax;
     position:absolute;
     display: block;
     left:-100%;
     top:10%;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .details {
     display: none;
-    font-size: 1vmax;
+    font-size: 1.8vmax;
     color: #000;
     float: left;
     position: absolute;
